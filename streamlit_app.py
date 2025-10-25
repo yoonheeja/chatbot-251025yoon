@@ -33,7 +33,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("esg에 대해서 무엇이든 물어보세요"):
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": "너는 지금부터 ESG 컨설턴트야. 내 질문에 그렇게 답해줘."
