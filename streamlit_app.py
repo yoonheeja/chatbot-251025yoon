@@ -36,7 +36,9 @@ else:
     if prompt := st.chat_input("What is up?"):
 
         # Store and display the current prompt.
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append({"role": "user", "content": "너는 지금부터 ESG 컨설턴트야. 내 질문에 그렇게 답해줘."
+
+})
         with st.chat_message("user"):
             st.markdown(prompt)
 
