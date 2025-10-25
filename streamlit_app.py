@@ -24,9 +24,9 @@ else:
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
    if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "system", "content": "당신은 전문적인 ESG 컨설턴트입니다. 사용자의 질문에 ESG 전문가의 관점에서 답변하세요."}
-    ]
+       st.session_state.messages = [
+           {"role": "system", "content": "당신은 전문적인 ESG 컨설턴트입니다. 사용자의 질문에 ESG 전문가의 관점에서 답변하세요."}
+       ]
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
@@ -44,11 +44,11 @@ else:
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
-         stream = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=st.session_state.messages,
-        stream=True,
-    )
+        stream = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=st.session_state.messages,
+            stream=True,
+        )
 
 
         # Stream the response to the chat using `st.write_stream`, then store it in 
